@@ -12,5 +12,5 @@ console.log
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        0.812 s, estimated 1 s
+Time:        0.709 s, estimated 1 s
 Ran all test suites matching /C:\\Users\\abdww\\Desktop\\new\\Assignments-Cohort50\\1-JavaScript\\Week3\\assignment\\ex1-doubleEvenNumbers.test.js/i.
