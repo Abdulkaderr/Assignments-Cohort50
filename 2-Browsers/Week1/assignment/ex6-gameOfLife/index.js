@@ -7,6 +7,7 @@ THIS IS A PREP EXERCISE FOR THE Q&A SESSION, IT SHOULD NOT BE PART OF THE ASSIGN
 Adapted from: https://spicyyoghurt.com/tutorials/javascript/conways-game-of-life-canvas
 Refactored from ES6 Class syntax to regular functions
 ------------------------------------------------------------------------------*/
+// I got some help from  VladaBessikalo Github file in many lines 
 const CELL_SIZE = 10;
 const NUM_COLUMNS = 75;
 const NUM_ROWS = 40;
@@ -17,7 +18,8 @@ const NUM_ROWS = 40;
  * @property {number} y
  * @property {boolean} alive
  * @property {boolean} [nextAlive]
- */
+ * @property {number} lifeTime
+ */ 
 
 /** @typedef {GridCell[]} GridRow */
 
@@ -34,6 +36,7 @@ function createCell(x, y) {
     x,
     y,
     alive,
+    lifeTime: alive ? 1 : 0,
   };
 }
 
@@ -87,7 +90,8 @@ export function createGame(context, numRows, numColumns) {
 
     if (cell.alive) {
       // Draw living cell inside background
-      context.fillStyle = `rgb(24, 215, 236)`;
+      const opacity = cell.lifeTime === 1 ? 0.25 : cell.lifeTime  === 2 ? 0.5 : cell.lifeTime  === 3 ? 0.75 : 1;
+      context.fillStyle = `rgba(24, 215, 236, ${opacity})`;
       context.fillRect(
         cell.x * CELL_SIZE + 1,
         cell.y * CELL_SIZE + 1,
@@ -144,12 +148,15 @@ export function createGame(context, numRows, numColumns) {
       if (numAlive === 2) {
         // Living cell remains living, dead cell remains dead
         cell.nextAlive = cell.alive;
+        cell.nextAlive === true ? cell.lifeTime++ : cell.lifeTime = 0;
       } else if (numAlive === 3) {
         // Dead cell becomes living, living cell remains living
         cell.nextAlive = true;
+        cell.lifeTime++;
       } else {
         // Living cell dies, dead cell remains dead
         cell.nextAlive = false;
+        cell.lifeTime = 0;
       }
     });
 
