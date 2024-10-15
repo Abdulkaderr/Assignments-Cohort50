@@ -21,7 +21,26 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
 function catWalk() {
-  // TODO complete this function
-}
+   const cat = document.querySelector('img');
+const catWalk ="http://www.anniemation.com/clip_art/images/cat-walk.gif";
+const catDance ="https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif";
 
-// TODO execute `catWalk` when the browser has completed loading the page
+let position = 0;
+let leftMove = 10;
+const screenWidth = window.innerWidth;
+position+=left;
+
+ cat.style.left = position+'px';
+
+ if (position >= (screenWidth / 2 - cat.offsetWidth / 2) && position <= screenWidth / 2 + cat.offsetWidth / 2) {
+   cat.src = catDance;
+   setTimeout(() => {
+     cat.src = walkingImage;
+   }, 5000);
+ }
+ if(position >= screenWidth ){
+   leftMove *= -1;}
+}
+window.addEventListener('load',function(){
+   setInterval(catWalk,50);
+});

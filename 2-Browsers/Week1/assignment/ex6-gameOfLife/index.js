@@ -7,7 +7,6 @@ THIS IS A PREP EXERCISE FOR THE Q&A SESSION, IT SHOULD NOT BE PART OF THE ASSIGN
 Adapted from: https://spicyyoghurt.com/tutorials/javascript/conways-game-of-life-canvas
 Refactored from ES6 Class syntax to regular functions
 ------------------------------------------------------------------------------*/
-// I got some help from  VladaBessikalo Github file in many lines 
 const CELL_SIZE = 10;
 const NUM_COLUMNS = 75;
 const NUM_ROWS = 40;
