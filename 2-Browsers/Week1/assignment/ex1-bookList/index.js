@@ -18,25 +18,43 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 //cspell: enable
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
+  const ul = document.createElement('ul');
+
+books.foreach((book)=>{
+const li = document.createElement('li');
+const p = document.createElement('p');
+p.textContent = `${book.title} by ${book.author}`;
+li.appendChild(p);
+
+const images = document.createElement('img');
+images.src = `./assets ${book.img}`;
+images.alt = book.title;
+images.appendChild(li);
+li.style.backgroundColor = book.alreadyRead ? "Green" : "Red";
+ul.appendChild(li);
+});
+return ul;
 }
 
 function main() {
   const myBooks = [
     {
       title: 'The Design of Everyday Things',
+      img: 'the_design_of_everyday_things.jpg',
       author: 'Don Norman',
       isbn: '978-0465050659',
       alreadyRead: false,
     },
     {
       title: 'The Most Human Human',
+      img: 'the_most_human_human.jpg',
       author: 'Brian Christian',
       isbn: '978-1617933431',
       alreadyRead: true,
     },
     {
       title: 'The Pragmatic Programmer',
+      img:'the_pragmatic_programmer.jpg',
       author: 'Andrew Hunt',
       isbn: '978-0201616224',
       alreadyRead: true,
@@ -48,3 +66,6 @@ function main() {
 }
 
 window.addEventListener('load', main);
+
+
+
