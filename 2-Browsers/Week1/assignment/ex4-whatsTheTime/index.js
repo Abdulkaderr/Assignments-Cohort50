@@ -8,15 +8,18 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 ------------------------------------------------------------------------------*/
 
 const current = document.createElement('span');
-current.id = 'dd';
-current.textContent = "22:44:23";
+current.id = 'liveTime';
 document.body.appendChild(current);
 
 
 function addCurrentTime() {
-  current.innerHTML =  moment().format('HH:mm:SS');
-}
+const now = new Date();
+const hours = String(now.getHours()).padStart(2,'0');
+const minutes = String(now.getMinutes()).padStart(2, '0');
+const seconds = String(now.getSeconds()).padStart(2, '0');
 
-setInterval(addCurrentTime,1000);
+current.textContent = `${hours}:${minutes}:${seconds}`;
+}
+let intervalId = setInterval(addCurrentTime, 1000); 
 
 window.addEventListener('load',addCurrentTime );

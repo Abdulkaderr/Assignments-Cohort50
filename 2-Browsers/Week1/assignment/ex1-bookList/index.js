@@ -19,7 +19,7 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 
 function createBookList(books) {
   const ul = document.createElement('ul');
-
+const fragment = document.createDocumentFragment();
 books.forEach((book)=>{
 const li = document.createElement('li');
 const p = document.createElement('p');
@@ -31,8 +31,9 @@ images.src = `./assets/${book.image}`;
 images.alt = book.title;
 li.appendChild(images);
 li.style.backgroundColor = book.alreadyRead ? "Green" : "Red";
-ul.appendChild(li);
+fragment.appendChild(li);
 });
+ul.appendChild(fragment);
 return ul;
 }
 
