@@ -1,15 +1,21 @@
 *** Unit Test Error Report ***
 
- PASS  .dist/2-Browsers/Week1/unit-tests/ex5-catWalk.test.js (8.234 s)
+ PASS  .dist/2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
   br-wk1-ex5-catWalk
-    ✅ HTML should be syntactically valid (237 ms)
-    ✅ should have all TODO comments removed (1 ms)
-    ✅ should use `setInterval()` and/or `setTimeout()`
-    ✅ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event (2 ms)
+    ✅ HTML should be syntactically valid (187 ms)
+    ✅ should have all TODO comments removed
+    ✅ should use `setInterval()` and/or `setTimeout()` (1 ms)
+    ✅ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
     ✅ `window.onload` or `window.addEventListener` should not call its event handler function
 
 Test Suites: 1 passed, 1 total
 Tests:       5 passed, 5 total
 Snapshots:   0 total
-Time:        9.84 s, estimated 47 s
+Time:        4.185 s, estimated 9 s
 Ran all test suites matching /C:\\Users\\abdww\\Desktop\\new\\Assignments-Cohort50\\.dist\\2-Browsers\\Week1\\unit-tests\\ex5-catWalk.test.js/i.
+
+*** Spell Checker Report ***
+
+2-Browsers/Week1/assignment/ex5-catWalk/index.js:25:84 - Unknown word (رابط)
+2-Browsers/Week1/assignment/ex5-catWalk/index.js:25:89 - Unknown word (الصورة)
+2-Browsers/Week1/assignment/ex5-catWalk/index.js:25:96 - Unknown word (الأصلية)
