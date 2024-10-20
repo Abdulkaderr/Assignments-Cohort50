@@ -22,7 +22,7 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 -----------------------------------------------------------------------------*/
 const cat = document.querySelector('img');
 const catDance ="https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif";
-const walkingImage = "http://www.anniemation.com/clip_art/images/cat-walk.gif"; // رابط الصورة الأصلية
+const walkingImage = "http://www.anniemation.com/clip_art/images/cat-walk.gif"; 
 
 let position = 0;
 let leftMove = 10;
