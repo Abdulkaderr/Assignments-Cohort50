@@ -11,13 +11,17 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/3-U
 ------------------------------------------------------------------------------*/
 
 export function rollDie() {
-  return new Promise((resolve)=>{
+  return new Promise((resolve, reject)=>{
       // Compute a random number of rolls (3-10) that the die MUST complete
     const randomRollsToDo = Math.floor(Math.random() * 8) + 3;
-    resolve(`Die scheduled for ${randomRollsToDo} rolls...`);
+    console.log(`Die scheduled for ${randomRollsToDo} rolls...`);
+    
+    rollOnce(1,randomRollsToDo)
+    .then(resolve)
+    .catch(reject);
   })}
 
-  const rollOnce = (roll) => {
+  const rollOnce = (roll,totalRolls) => {
     return new Promise((resolve, reject)=>{
 // Compute a random die value for the current roll
 const value = Math.floor(Math.random() * 6) + 1;
@@ -26,22 +30,23 @@ console.log(`Die value is now: ${value}`);
     // Use callback to notify that the die rolled off the table after 6 rolls
     if (roll > 6) {
       reject(new Error('Oops... Die rolled off the table.'));
+      return;
     }
 
     // Use callback to communicate the final die value once finished rolling
-    if (roll === randomRollsToDo) {
+    if (roll === totalRolls) {
       resolve(value);
+      return;
     }
 
     // Schedule the next roll todo until no more rolls to do
-    if (roll < randomRollsToDo) {
-      setTimeout(() => rollOnce(roll + 1), 500);
-    }
+  
+      setTimeout(() => rollOnce(roll + 1, totalRolls).then(resolve).catch(reject), 500);
+    });
    
 
   // Start the initial roll
-  rollOnce(1);
-})
+
   
 
  }
