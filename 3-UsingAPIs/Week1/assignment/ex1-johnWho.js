@@ -15,7 +15,7 @@ export const getAnonName = (firstName) => {
         const fullName = `${firstName} Doe`;
         resolve(fullName);
       }else{
-        reject(console.log(new Error("You didn't pass in a first name!")));
+        reject(new Error("You didn't pass in a first name!"));
         
       }
     }, 1000);
@@ -26,7 +26,7 @@ export const getAnonName = (firstName) => {
 function main() {
   getAnonName('John')
   .then((result)=>{console.log(result)})
-  .catch((error)=>{console.log(new Error("You didn't pass in a first name!"))
+  .catch((error)=>{console.log(error.message)
     
   })
 }

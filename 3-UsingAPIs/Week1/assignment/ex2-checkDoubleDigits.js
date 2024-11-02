@@ -16,7 +16,7 @@ return new Promise((resolve, reject)=>{
   if(number >= 10 && number <= 99){
     resolve('This is a double digit number!');
    } else{
-    reject('"Expected a double digit number but got' + number);
+    reject(new Error('Expected a double digit number but got' + number));
   }
 })}
 
