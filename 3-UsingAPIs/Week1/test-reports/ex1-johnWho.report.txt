@@ -4,13 +4,13 @@ Command failed: npx jest C:/Users/abdww/Desktop/new/Assignments-Cohort50/.dist/3
  FAIL  .dist/3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
   api-wk1-ex1-johnWho
     ✅ should exist and be executable (2 ms)
-    ✅ should have all TODO comments removed
-    ❌ `getAnonName` should not contain unneeded console.log calls (3 ms)
-    ✅ should call `new Promise()`
-    ✅ should take a single argument (1 ms)
+    ✅ should have all TODO comments removed (1 ms)
+    ❌ `getAnonName` should not contain unneeded console.log calls (2 ms)
+    ✅ should call `new Promise()` (1 ms)
+    ✅ should take a single argument
     ✅ `resolve()` should be called with a one argument
-    ✅ `reject()` should be called with a one argument
-    ❌ should resolve when called with a string argument (2 ms)
+    ✅ `reject()` should be called with a one argument (1 ms)
+    ❌ should resolve when called with a string argument (1 ms)
     ❌ should reject with an Error object when called without an argument (1 ms)
 
   ● api-wk1-ex1-johnWho › `getAnonName` should not contain unneeded console.log calls
@@ -39,5 +39,5 @@ Command failed: npx jest C:/Users/abdww/Desktop/new/Assignments-Cohort50/.dist/3
 Test Suites: 1 failed, 1 total
 Tests:       3 failed, 6 passed, 9 total
 Snapshots:   0 total
-Time:        0.908 s, estimated 2 s
+Time:        0.943 s, estimated 1 s
 Ran all test suites matching /C:\\Users\\abdww\\Desktop\\new\\Assignments-Cohort50\\.dist\\3-UsingAPIs\\Week1\\unit-tests\\ex1-johnWho.test.js/i.
