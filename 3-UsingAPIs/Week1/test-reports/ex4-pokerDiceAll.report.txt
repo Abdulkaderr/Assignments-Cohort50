@@ -2,16 +2,16 @@
 
  PASS  .dist/3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
   api-wk1-ex4-pokerDiceAll
-    ✅ should exist and be executable (3 ms)
-    ✅ should have all TODO comments removed (1 ms)
+    ✅ should exist and be executable (2 ms)
+    ✅ should have all TODO comments removed
     ✅ `rollDice` should not contain unneeded console.log calls (1 ms)
     ✅ should use `dice.map()`
     ✅ should use `Promise.all()`
-    ✅ should resolve when all dice settle successfully (9 ms)
-    ✅ should reject with an Error when a die rolls off the table (53 ms)
+    ✅ should resolve when all dice settle successfully (5 ms)
+    ✅ should reject with an Error when a die rolls off the table (86 ms)
 
 Test Suites: 1 passed, 1 total
 Tests:       7 passed, 7 total
 Snapshots:   0 total
-Time:        1.118 s
+Time:        0.893 s, estimated 1 s
 Ran all test suites matching /C:\\Users\\abdww\\Desktop\\new\\Assignments-Cohort50\\.dist\\3-UsingAPIs\\Week1\\unit-tests\\ex4-pokerDiceAll.test.js/i.
