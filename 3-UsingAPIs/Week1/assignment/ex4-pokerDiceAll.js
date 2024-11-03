@@ -41,4 +41,12 @@ function main() {
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
   main();
-}
+ }
+
+/*
+ You may also notice that, in the case of a rejected promise, dice that have not
+ yet finished their roll continue to do so. 
+ Can you explain why?
+ */
+
+//  each die roll runs independently. Even if one of the rolls fails

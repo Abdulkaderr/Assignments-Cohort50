@@ -62,3 +62,13 @@ rollDie()
 if (process.env.NODE_ENV !== 'test') {
   main();
 }
+
+/*
+Does the problem described above still occur? If not, what would be your
+  explanation?
+*/
+/*
+no it's not
+because we can manage the completion state (either resolved or rejected)
+ of each individual operation without interference from others.
+*/
