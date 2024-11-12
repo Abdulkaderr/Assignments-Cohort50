@@ -21,18 +21,60 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+const url = "https://pokeapi.co/api/v2/pokemon?limit=151"
+function fetchData(url) {
+  return fetch(url)
+  .then((response)=>{
+    if(!(response.ok)){
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .catch((error) => {
+    console.error(`Fetching data failed: ${error.message}`);
+    throw error; 
+  });
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+
+async function fetchAndPopulatePokemons() {
+  const selectElement = document.createElement('select');
+  document.body.appendChild(selectElement);
+try{
+const data = await fetchData(url);
+data.results.forEach((pokemon)=>{
+  const option = document.createElement('option');
+  option.value = pokemon.name;
+  option.textContent = pokemon.name;
+  selectElement.appendChild(option);
+});
+selectElement.addEventListener('change',async (event) =>{
+  await fetchImage(event.target.value);
+});
+}catch (error) {
+  console.error("Error populating Pokémon list:", error.message);
+}
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchImage(pokemonName) {
+  try {
+    const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
+    const data = await fetchData(pokemonUrl); 
+    const imgElement = document.querySelector('img') || document.createElement('img');
+    imgElement.src = data.sprites.front_default;
+    if (!imgElement.parentNode) {
+      document.body.appendChild(imgElement);
+    }
+  } catch (error) {
+    console.error("Error fetching Pokémon image:", error.message);
+  }
 }
 
-function main() {
-  // TODO complete this function
+
+ function main() {
+
+  fetchAndPopulatePokemons();
+
+ 
 }
+window.addEventListener('load', main);
