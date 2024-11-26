@@ -25,10 +25,12 @@ export const getAnonName = (firstName) => {
 
 function main() {
   getAnonName('John')
-  .then((result)=>{console.log(result)})
-  .catch((error)=>{console.log(error.message)
-    
+  .then((result)=>{
+    console.log(result)
   })
+  .catch((error)=>{
+    console.log(error.message);
+  });
 }
 
 // ! Do not change or remove the code below

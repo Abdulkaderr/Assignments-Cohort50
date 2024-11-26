@@ -18,7 +18,9 @@ return new Promise((resolve, reject)=>{
    } else{
     reject(new Error('Expected a double digit number but got' + number));
   }
-})}
+});
+}
+ 
 
 function main() {
   checkDoubleDigits(9) // should reject

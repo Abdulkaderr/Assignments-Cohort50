@@ -49,4 +49,6 @@ if (process.env.NODE_ENV !== 'test') {
  Can you explain why?
  */
 
-//  each die roll runs independently. Even if one of the rolls fails
+//  each die roll runs independently. Even if one of the rolls fails 
+// promises are asynchronous operations and do not block other operations. 
+//Each promise has its own execution context, so even if one is rejected or resolved, it does not affect the others
