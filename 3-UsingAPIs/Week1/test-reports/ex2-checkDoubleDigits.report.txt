@@ -4,18 +4,18 @@
   api-wk1-ex2-checkDoubleDigits
     ✅ should exist and be executable (2 ms)
     ✅ should have all TODO comments removed (1 ms)
-    ✅ `checkDoubleDigits` should not contain unneeded console.log calls
+    ✅ `checkDoubleDigits` should not contain unneeded console.log calls (1 ms)
     ✅ should call new Promise()
     ✅ `resolve()` should be called with a one argument
     ✅ `reject()` should be called with a one argument
     ✅ should be a function that takes a single argument
     ✅ (9) should return a rejected promise with an Error object (1 ms)
     ✅ (10) should return a promise that resolves to "This is a double digit number!" (1 ms)
-    ✅ (99) should return a promise that resolves to "This is a double digit number!" (1 ms)
+    ✅ (99) should return a promise that resolves to "This is a double digit number!"
     ✅ (100) should return a rejected promise with an Error object
 
 Test Suites: 1 passed, 1 total
 Tests:       11 passed, 11 total
 Snapshots:   0 total
-Time:        1.225 s
+Time:        1.223 s
 Ran all test suites matching /C:\\Users\\abdww\\Desktop\\new\\Assignments-Cohort50\\.dist\\3-UsingAPIs\\Week1\\unit-tests\\ex2-checkDoubleDigits.test.js/i.

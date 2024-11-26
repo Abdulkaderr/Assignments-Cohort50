@@ -6,12 +6,12 @@
     ✅ should have all TODO comments removed
     ✅ `rollDice` should not contain unneeded console.log calls (1 ms)
     ✅ should use `dice.map()`
-    ✅ should use `Promise.all()`
-    ✅ should resolve when all dice settle successfully (5 ms)
-    ✅ should reject with an Error when a die rolls off the table (86 ms)
+    ✅ should use `Promise.all()` (1 ms)
+    ✅ should resolve when all dice settle successfully (7 ms)
+    ✅ should reject with an Error when a die rolls off the table (68 ms)
 
 Test Suites: 1 passed, 1 total
 Tests:       7 passed, 7 total
 Snapshots:   0 total
-Time:        0.893 s, estimated 1 s
+Time:        1.094 s
 Ran all test suites matching /C:\\Users\\abdww\\Desktop\\new\\Assignments-Cohort50\\.dist\\3-UsingAPIs\\Week1\\unit-tests\\ex4-pokerDiceAll.test.js/i.
